@@ -4,6 +4,7 @@
  <head>
   <title>fannie's special</title>
   <style>
+ 
   @keyframes heartfade {
    0% {
     opacity : 1;
@@ -21,14 +22,134 @@
   body {
    background-color : #ffceed;
   }
+.fade-in-text {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 20%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    animation: fadein 3s;
+    -webkit-animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    -o-animation: fadein 3s;
+    
+}
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+    
+@-moz-keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-o-keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadein{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
   .heart {
    z-index : 999;
    position : absolute;
+   top: 3%;
+   left: 3%;
+}
+.box {
+  width: 15%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #fd65bb;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #f779d5;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #fd78cc;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
 }
 .heart:before,
 .heart:after {
    content : "";
-   background-color : #fc2a62;
+   background-color : #ffa4bc;
    position : absolute;
    height : 30px;
    width : 45px;
@@ -45,6 +166,22 @@
  </head>
  <body>
     <div class="heart"></div>
+    <div class="fade-in-text">
+        <p>web ini special untukmu</p>
+    </div>
+    <div class="box">
+        <a class="button" href="#popup1">click ya cantik</a>
+    </div>
+    
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Hola bubb</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                buat kamu aku cuma mau bilang makasih udah mau bareng terus sama aku sampai sejauh ini,love you cantik <3
+            </div>
+        </div>
+    </div>
  </body>
  <script>
     var brd = document.createElement("DIV");
