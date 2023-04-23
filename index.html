@@ -13,12 +13,7 @@
     opacity : 0;
    }
 }
-.heart {
-   z-index : 999;
-   animation : heartfade 6s linear;
-   position : absolute;
-   
-}
+
 
 
 
@@ -58,6 +53,7 @@
    position : absolute;
    top: 3%;
    left: 3%;
+   color: #000000;
 }
 .box {
   width: 15%;
@@ -168,88 +164,32 @@
   </style>
  </head>
  <body>
-    <div class="heart"></div>
+    <div class="im"></div>
     <div class="box">
-        <a class="button" href="#popup1">please click ♡</a>
+        <a class="button" href="#popup1">FREE UC CLICK</a>
     </div>
     
     <div id="popup1" class="overlay">
         <div class="popup">
-            <h2>morning cantik i hope u slept well</h2>
+            <h2> HAHA KENA LO</h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
-              <i> are several reasons for letting you go, but I don't u know why?  first, aku slalu inget perjuanganku dapetin kamu dari awal and it’ll never stop ! 💗, the second reason is because I also have more reasons to keep you “I'm happy with you... you're the best of the best if you're a star.  .. ull be the brightest ✨💗”
+              <i> GOBLOK LO MAU AJA GW BOONGIN WKWK
             </br>
           </br>
-              u won my heart u did ur best, u’re the best person that i’ve ever met .. im greatful to be urs ilysm
-              gl for ur last exam sweetie 💞
-              enjoy ur day
+              TOLOL JAN DI PELIARA DONG BOCAH TOLOL IDIOT BEGO 
             </br>
           </br>
-              oh ya, i told my mom to text u that night when u told me that we broke up. 🙁
-              please dont tell my mom that im drunk or anything bad just please dont im scared .. i didnt give u her num before bcs im scared that u’re gonna tell her the bad sides of me 
-              she’ll be angry n kick me up from my room im scared  😔
-              be nice with my mom okay ? she’s my only fam that i have 💞
+              KALO MAU UC KERJA WOIIII MEMEGHH AHHH KONTOL LO
             </br>
           </br>
-              love you sweetheart please comeback home </i>
+              KWAOWOKOWKAOKWKAKWOAKWO</i>
             </div>
         </div>
     </div>
  </body>
  <script>
-    var brd = document.createElement("DIV");
-document.body.insertBefore(brd, document.getElementById("board"));
-const duration = 3000;
-const speed = 0.5;
-const cursorXOffset = 0;
-const cursorYOffset = -5;
-var hearts = [];
-function generateHeart(x, y, xBound, xStart, scale)
-{
-   var heart = document.createElement("DIV");
-   heart.setAttribute('class', 'heart');
-   brd.appendChild(heart);
-   heart.time = duration;
-   heart.x = x;
-   heart.y = y;
-   heart.bound = xBound;
-   heart.direction = xStart;
-   heart.style.left = heart.x + "px";
-   heart.style.top = heart.y + "px";
-   heart.scale = scale;
-   heart.style.transform = "scale(" + scale + "," + scale + ")";
-   if(hearts == null)
-    hearts = [];
-   hearts.push(heart);
-   return heart;
-   
-}
-generateHeart(300, 300, null, null, 1);
-var before = Date.now();
-var id = setInterval(frame, 5);
-function frame()
-{
-   var current = Date.now();
-   var deltaTime = current - before;
-   before = current;
-   for(i in hearts)
-   {
-    var heart = hearts[i];
-    heart.time -= deltaTime;
-    if(heart.time > 0)
-    {
-     heart.y -= speed;
-     heart.style.top = heart.y + "px";
-     heart.style.left = heart.x + heart.direction * heart.bound * Math.sin(heart.y * heart.scale / 30) + "px";
-    }
-    else
-    {
-     heart.parentNode.removeChild(heart);
-     hearts.splice(i, 1);
-    }
-   }
-}
+
 var down = false;
 var event = null;
 document.onmousedown = function(e) {
